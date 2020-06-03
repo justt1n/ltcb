@@ -14,6 +14,11 @@ int LCM(int a, int b)
     }
     return a * b;
 }
+int lmz()
+{
+    return 0;
+}
+//test
 
 int main()
 {
