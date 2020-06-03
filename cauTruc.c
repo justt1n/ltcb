@@ -6,7 +6,7 @@ struct Point
 {
     double X, Y;
 };
-
+//Thay doi ne
 struct Point readPoint()
 {
     struct Point A;
