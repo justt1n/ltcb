@@ -1,0 +1,5 @@
+Toan |Vat ly |Hoa hoc |Ho va  ten
+ 7.00| 9.00  | 4.00   |Bui Thi Tuong Van
+ 4.00| 5.00  | 6.00   |Tran Van B
+ 5.60| 7.90  |10.00   |Nguyen Van A
+Tong so: 3

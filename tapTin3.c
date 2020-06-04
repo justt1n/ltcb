@@ -2,19 +2,22 @@
 
 int main()
 {
-    char a[100];
-    fgets(a, 100, stdin);
-    int i = 0;
-    while (a[i] != '\0')
+    FILE *fileptr;
+    int count_lines = 0;
+    char filechar[40], chr;
+    scanf("%s", filechar);
+    fileptr = fopen(filechar, "r");
+
+    chr = getc(fileptr);
+    while (!feof(fileptr))
     {
-        if (a[i] == '\n')
+        chr = getc(fileptr);
+        if (chr == '\n')
         {
-            a[i] = '\0';
-            break;
+            count_lines++;
         }
-        i++;
     }
-    FILE *file = fopen(a, "r");
-    int count = 0;
-    while
+    fclose(fileptr);
+    printf("%d", count_lines);
+    return 0;
 }
