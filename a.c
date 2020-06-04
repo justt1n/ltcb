@@ -1,29 +1,42 @@
 #include <stdio.h>
-#include <math.h>
-int LCM(int a, int b)
+
+int ReadList(int a[], int n)
 {
-    a = abs(a);
-    b = abs(b);
-    int max = b;
-    if (a > b)
-        max = a;
-    for (int i = max; i < a * b; i++)
-    {
-        if (a % i == 0 && b % i == 0)
-            return i;
-    }
-    return a * b;
-}
-int lmz()
-{
+    for (int i = 0; i < n; i++)
+        scanf("%d", &a[i]);
     return 0;
 }
-//test
+
+void bubbleSort(int a[], int n)
+{
+    for (int j = 0; j < n; j++)
+        for (int i = 0; i < n; i++)
+        {
+            if (a[i] > a[i + 1])
+            {
+                int tmp = a[i + 1];
+                a[i + 1] = a[i];
+                a[i] = tmp;
+            }
+        }
+    return;
+}
+
+int printfList(int a[], int n)
+{
+    for (int i = 0; i < n; i++)
+        printf("%d ", a[i]);
+    return 0;
+}
 
 int main()
 {
-    int a, b;
-    scanf("%d%d", &a, &b);
-    printf("%d", LCM(a, b));
-    return 0;
+    int n;
+    scanf("%d", &n);
+    int a[n];
+    ReadList(a, n);
+    printfList(a, n);
+    printf("\n");
+    bubbleSort(a, n);
+    printfList(a, n);
 }
