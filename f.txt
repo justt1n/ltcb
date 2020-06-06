@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 dsa
 a
 a.
@@ -9,17 +8,3 @@ a.c
     a
     .
         
-=======
-tiu
-ne
-troi
-oi
-sao
-loi
-hoai 
-v
-  .    
-.
-a
-aaa
->>>>>>> 160c32ccc615bd0d454cfcbba0aafdf86ac63b46

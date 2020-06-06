@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 
+//Dem dong tren tap tin
+
 int countLines(FILE *a)
 {
     char ch[100];
