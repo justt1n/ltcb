@@ -35,6 +35,8 @@ int printList1d(int a[], int n)
 int main()
 {
     int n;
+    char abc[100];
+    gets(abc);
     scanf("%d", &n);
     int a[n];
     readList1d(a, n);
