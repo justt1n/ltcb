@@ -2,16 +2,16 @@
 #include <stdlib.h>
 #include <string.h>
 
-int nonEmpty(char ch[])
-{
-    int i = 0;
-    while (ch[i] != '\0')
-    {
-        if (ch[i] != ' ')
-            return 1;
-    }
-    return 0;
-}
+// int nonEmpty(char ch[])
+// {
+//     int i = 0;
+//     while (ch[i] != '\0')
+//     {
+//         if (ch[i] != ' ')
+//             return 1;
+//     }
+//     return 0;
+// }
 
 int main()
 {

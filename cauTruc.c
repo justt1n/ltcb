@@ -230,16 +230,16 @@ void swap(int *xp, int *yp)
     *yp = temp;
 }
 
-void sapXepSV(SinhVien *L, int n)
-{
-    for (int i = 0; i < n - 1; i++)
-    {
-        for (int j = 0; j < n - i - 1; j++)
-        {
-            if ((*L)[1] >= (*L)[j + 1])
-        }
-    }
-}
+// void sapXepSV(SinhVien *L, int n)
+// {
+//     for (int i = 0; i < n - 1; i++)
+//     {
+//         for (int j = 0; j < n - i - 1; j++)
+//         {
+//             if ((*L)[1] >= (*L)[j + 1])
+//         }
+//     }
+// }
 
 /*DON THUC
 struct DonThuc
