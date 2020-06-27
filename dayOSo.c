@@ -144,7 +144,6 @@ int main()
 {
     State S, N;
     char fname[500];
-    char cmd[12];
     fgets(fname, 500, stdin);
     int len = strlen(fname);
     if (fname[len - 1] == '\n')
@@ -156,6 +155,7 @@ int main()
     while (is_finished(S) != 1)
     {
         print_state(S);
+        char cmd[12];
         fgets(cmd, 12, stdin);
         int len = strlen(cmd);
         if (cmd[len - 1] == '\n')
@@ -163,7 +163,7 @@ int main()
             len--;
             cmd[len] = '\0';
         }
-        if (strcmp(cmd, "UP"))
+        if (strcmp(cmd, "UP") == 0 || strcmp(cmd, "up") == 0)
         {
             if (up(S, &N))
             {
@@ -171,10 +171,9 @@ int main()
                 S = N;
             }
             else
-                printf("Illegal move.");
-            S = N;
+                printf("Illegal move.\n");
         }
-        else if (strcmp(cmd, "DOWN"))
+        else if (strcmp(cmd, "DOWN") == 0 || strcmp(cmd, "down") == 0)
         {
             if (down(S, &N))
             {
@@ -182,10 +181,9 @@ int main()
                 S = N;
             }
             else
-                printf("Illegal move.");
-            S = N;
+                printf("Illegal move.\n");
         }
-        else if (strcmp(cmd, "LEFT"))
+        else if (strcmp(cmd, "LEFT") == 0 || strcmp(cmd, "left") == 0)
         {
             if (left(S, &N))
             {
@@ -193,10 +191,9 @@ int main()
                 S = N;
             }
             else
-                printf("Illegal move.");
-            S = N;
+                printf("Illegal move.\n");
         }
-        else if (strcmp(cmd, "RIGHT"))
+        else if (strcmp(cmd, "RIGHT") == 0 || strcmp(cmd, "right") == 0)
         {
             if (right(S, &N))
             {
@@ -204,16 +201,18 @@ int main()
                 S = N;
             }
             else
-                printf("Illegal move.");
+                printf("Illegal move.\n");
         }
-        else if (strcmp(cmd, "EXIT"))
+        else if (strcmp(cmd, "EXIT") == 0 || strcmp(cmd, "exit") == 0)
         {
-            print_state(S);
-            printf("YOU LOSE!");
+            printf("You lose!");
+            return 0;
         }
         else
         {
-            printf("Unknown command, please enter: UP, DOWN, LEFT, RIGHT or EXIT");
+            printf("Unknown command, please enter: UP, DOWN, LEFT, RIGHT or EXIT\n");
         }
     }
+    printf("You win!\n");
+    getchar();
 }
