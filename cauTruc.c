@@ -1,12 +1,11 @@
 #include <stdio.h>
 #include <math.h>
 #include <stdlib.h>
-/*POINT
+
 struct Point
 {
     double X, Y;
 };
-
 
 struct Point readPoint()
 {
@@ -17,7 +16,7 @@ struct Point readPoint()
 
 void printPoint(struct Point A)
 {
-    printf("(%.3lf, %.3lf)", A.Y, A.Y);
+    printf("(%.3lf, %.3lf)", A.X, A.Y);
 }
 
 double distance(struct Point A, struct Point B)
@@ -68,8 +67,7 @@ int isIn(struct Point M, struct Rect r)
         return 1;
     return 0;
 }
-*/
-/* PHAN SO
+
 struct PhanSo
 {
     int TuSo;
@@ -116,9 +114,7 @@ void nhan(struct PhanSo A, struct PhanSo B, struct PhanSo *pC)
     pC->MauSo = A.MauSo * B.MauSo;
     chuanhoa(pC);
 }
-*/
 
-/* SO PHUC
 typedef struct
 {
     double Real, Image;
@@ -141,7 +137,6 @@ void add(Complex A, Complex B, Complex *pC)
     pC->Real = A.Real + B.Real;
     pC->Image = A.Image + B.Image;
 }
-*/
 
 // DANH SACH SV
 typedef struct
